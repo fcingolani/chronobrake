@@ -2,7 +2,32 @@
 
 ChronoBrake will hold your request for a specified amount of time.
 
-# Docker
+## Usage
+
+Start the server
+
+```
+$ go get github.com/fcingolani/chronobrake
+$ $GOPATH/bin/chronobrake
+{"level":"info","msg":"Listening on 3000","time":"2016-10-18T11:57:45-03:00"}
+```
+Then make a request, using the desired hold time in milliseconds as its path. For example this request will take 10 seconds to complete:
+
+```
+$ curl http://localhost:3000/10000
+10000
+```
+
+## Options
+
+ChronoBrake accepts the following arguments:
+
+```
+  -port string
+        server port (default "3000")
+```
+
+## Docker
 
 ```
 $ docker run -d -p 3000:3000 fcingolani/chronobrake
