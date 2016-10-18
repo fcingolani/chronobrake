@@ -1,5 +1,7 @@
 # ChronoBrake
 
+[![Docker Automated buil](https://img.shields.io/docker/automated/fcingolani/chronobrake.svg)]()
+
 ChronoBrake will hold your request for a specified amount of time.
 
 ## Usage
