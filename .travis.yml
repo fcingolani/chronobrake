@@ -8,8 +8,9 @@ branches:
     - master
 
 env:
-  - GOOS=darwin
-  - GOOS=linux
-  - GOOS=windows
-  - GOARCH=386
-  - GOARCH=amd64
+  - GOOS=darwin GOARCH=386
+  - GOOS=linux GOARCH=386
+  - GOOS=windows GOARCH=386
+  - GOOS=darwin GOARCH=amd64
+  - GOOS=linux GOARCH=amd64
+  - GOOS=windows GOARCH=amd64
