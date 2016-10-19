@@ -1,16 +1,23 @@
 language: go
 
 go:
-  - 1.6
-  
+- 1.6
+
 branches:
   only:
-    - master
+  - master
 
-env:
-  - GOOS=darwin GOARCH=386
-  - GOOS=linux GOARCH=386
-  - GOOS=windows GOARCH=386
-  - GOOS=darwin GOARCH=amd64
-  - GOOS=linux GOARCH=amd64
-  - GOOS=windows GOARCH=amd64
+deploy:
+  provider: releases
+  api_key:
+    secure: Ef+4opmQRzjq7dgiW7cTsuQIZsSttdu8f1dOGi+cPlUvTv3tlh47A64ALu+vUfiy9/+ShvDsz6LcIO9BV4xfPjQ96B/BfRWVtiWn7Jr1rK9d7kGXLQ48jyWSxhthQn3ryXD7j9Q1JtcQG6s83p0pOyg9ukDiQ0uK/RDSjOdNBNJs4KgOwsejgOQvKv88eIsF6UIRmqLlNVOhfGQlmLH/71Sj3VEnYir2CburLdcFRpu2t/Ffz0153Cwi5Q+RCULD4ryRGxcFpOYPJjPywPOFEybscXzjDbKe35HW1iJCsQeLIYOBsq5q02nf/AyS4cETFNcOS1tVoirOwIxlbKWELGwFwmsnr7oc7Mi+lHn6MD26osapJ0YPtAR6feZpLxNZMfubySMDz3/27OvLGWmIR+odwk5cvGwJMGw2ruG71kNkP6rpeCdvvDscrRHTY4ME1RxTRNfgjVRFcXbdwX/PWW4bvnpvvhUkKOVuV0gp8J/UiR6uKttqWng13iaQvIZIP+zBUiWoes+RR3U+23Tw20o9oHARKNgSij5/iN7m/16Dzh4GM6r52RRELQn6XcIrdZMNqQ45qNT7ZnuS47RYmIfN350Ix9snLgOsrGmpJAsRzTOCVW66wbkGs3CbA43830SKzeduuE7ts6JlyKsymGiDotRWNMsM1Un0B9o3RvI=
+  file:
+  - release/chronobrake-linux-amd64
+  - release/chronobrake-linux-386
+  - release/chronobrake-darwin-amd64
+  - release/chronobrake-darwin-386
+  - release/chronobrake-windows-amd64.exe
+  - release/chronobrake-windows-386.exe
+  on:
+    repo: fcingolani/chronobrake
+    tags: true
