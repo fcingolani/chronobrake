@@ -3,6 +3,7 @@ package = github.com/fcingolani/chronobrake
 .PHONY: release
 
 release:
+	go get
 	mkdir -p release
 	GOOS=linux GOARCH=amd64 go build -o release/chronobrake-linux-amd64 $(package)
 	GOOS=linux GOARCH=386 go build -o release/chronobrake-linux-386 $(package)
