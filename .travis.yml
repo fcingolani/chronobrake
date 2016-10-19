@@ -4,8 +4,8 @@ go:
   - 1.6
 
 env:
-- GOOS=darwin
-- GOOS=linux
-- GOOS=windows
-- GOARCH=386
-- GOARCH=amd64
+  - GOOS=darwin
+  - GOOS=linux
+  - GOOS=windows
+  - GOARCH=386
+  - GOARCH=amd64
